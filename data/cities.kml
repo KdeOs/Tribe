@@ -457,6 +457,13 @@
   </Point>
 </Placemark>
 <Placemark>
+  <name>Krasnoyarsk</name>
+  <description>Asia/Krasnoyarsk</description>
+  <Point>
+    <coordinates>92.852776,56.010788</coordinates>
+  </Point>
+</Placemark>
+<Placemark>
   <name>Kuwait</name>
   <description>Asia/Kuwait</description>
   <Point>
@@ -1231,7 +1238,7 @@
   <name>Dawson Creek</name>
   <description>America/Dawson_Creek</description>
   <Point>
-    <coordinates>-120.1340,55.4533</coordinates>
+    <coordinates>-97.7034,43.1462</coordinates>
   </Point>
 </Placemark>
 <Placemark>
