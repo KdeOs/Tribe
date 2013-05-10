@@ -70,7 +70,7 @@ void NetInstPage::aboutToGoToPrevious()
 
 bool NetInstPage::loadGroupList()
 {
-    QString confUrl("https://gitorious.org/chakra/tribe/blobs/raw/netinstall/data/netinstall.conf");
+    QString confUrl("https://github.com/KdeOs/Tribe/raw/master/data/netinstall.conf");
 
     KIO::Job* getJob = KIO::get(confUrl, KIO::Reload, KIO::Overwrite | KIO::HideProgressInfo);
     QByteArray data;
