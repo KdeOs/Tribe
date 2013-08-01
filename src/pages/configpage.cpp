@@ -1,7 +1,8 @@
 /*
  * Copyright (c) 2008, 2009  Dario Freddi <drf@chakra-project.org>
  *               2010        Drake Justice <djustice.kde@gmail.com>
- *               2913        Manuel Tortosa (manutortosa@chakra-project.org)
+ *               2012        Manuel Tortosa (manutortosa@chakra-project.org)
+ *               2011-2013   Anke Boersma <demm@kde-os.tk>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -95,7 +96,7 @@ void ConfigPage::createWidget()
     // first call to check internet connection
     connect(&networkManager, SIGNAL(finished(QNetworkReply*)),
              this, SLOT(handleNetworkData(QNetworkReply*)));
-    networkManager.get(QNetworkRequest(QString("http://chakra-project.org")));
+    networkManager.get(QNetworkRequest(QString("http://kde-os.tk")));
 
     // check installed kde version
     /* QProcess proc;

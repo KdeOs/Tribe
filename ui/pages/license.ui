@@ -58,7 +58,7 @@ p, li { white-space: pre-wrap; }
       <bool>false</bool>
      </property>
      <property name="text">
-      <string>Chakra includes some proprietary software like hardware drivers, media plugins and fonts. To install them, you have to read and accept their licenses. If you choose against a license, the installer will try to use a free solution (if one is available).</string>
+      <string>KdeOS includes some proprietary software like hardware drivers, media plugins and fonts. To install them, you have to read and accept their licenses. If you choose against a license, the installer will try to use a free solution (if one is available).</string>
      </property>
      <property name="scaledContents">
       <bool>true</bool>

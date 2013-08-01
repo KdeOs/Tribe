@@ -57,7 +57,7 @@ p, li { white-space: pre-wrap; }
       </sizepolicy>
      </property>
      <property name="text">
-      <string>Check out what's new, the known issues and general information about this version of Chakra. As always, you are encouraged to tell us what you think, either by visiting our forums or bug tracker.</string>
+      <string>Read what's new, the known issues and general information about this version of KdeOS. You are encouraged to tell us what you think, either by visiting our forums or mailing-list.</string>
      </property>
      <property name="wordWrap">
       <bool>true</bool>

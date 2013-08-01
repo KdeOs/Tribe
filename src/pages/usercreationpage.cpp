@@ -3,6 +3,7 @@
  *               2009        Lukas Appelhans <l.appelhans@gmx.de>
  *               2010        Drake Justice <djustice.kde@gmail.com>
  *               2013        Manuel Tortosa <manutorotsa@chalra-project.org>
+ *               2011-2013   Anke Boersma <demm@kde-os.tk>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -42,7 +43,7 @@ void UserCreationPage::createWidget()
     ui.setupUi(this);
     ui.addUser->setIcon(KIcon("list-add"));
 
-    ui.hostname->setText("chakra-pc");
+    ui.hostname->setText("kdeos");
 
     connect(ui.addUser, SIGNAL(clicked(bool)), this, SLOT(addUserClicked()));
 
@@ -222,7 +223,7 @@ bool UserCreationPage::validate()
     m_handler->setUserAutoLoginList(autoLoginList);
 
     if (ui.hostname->text().isEmpty())
-        ui.hostname->setText("chakra-pc");
+        ui.hostname->setText("kdeos");
 
     m_handler->setHostname(ui.hostname->text());
 

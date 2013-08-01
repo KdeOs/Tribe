@@ -404,7 +404,7 @@ while [ $# -gt 0 ]
 			echo -e "$_y >$_W Example:$_n "
 			echo " "
 			echo -e "$_W   ./postinstall --job flashplugin               :$_n removes the flashplugin from the target"
-			echo -e "$_W                 --mountpoint /mnt/chakra_target :$_n defines the mountpoint of the install target"
+			echo -e "$_W                 --mountpoint /mnt/kdeos_target :$_n defines the mountpoint of the install target"
 			echo " "
 			shift 1
 			;;

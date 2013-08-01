@@ -2,7 +2,7 @@
 <kml xmlns="http://earth.google.com/kml/2.2">
 <Document>
 <Placemark>
-  <name>Chakra World Domination HQ</name>
+  <name>Some HQ</name>
   <description></description>
   <Point>
     <coordinates>0.0000,-90.0000</coordinates>

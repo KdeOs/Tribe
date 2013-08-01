@@ -42,8 +42,8 @@
 int main(int argc, char *argv[])
 {
     KAboutData aboutData("tribe", 0, ki18n("Tribe"),
-    TRIBE_VERSION, ki18n("Graphical Installer for Chakra"), KAboutData::License_GPL,
-                        ki18n("(c) 2008 - 2013 the Chakra Development Team"), ki18n("chakra@chakra-project.org"), "http://chakra-project.org");
+    TRIBE_VERSION, ki18n("Graphical Installer for KdeOS, forked from the Chakra-Project"), KAboutData::License_GPL,
+                        ki18n("(c) 2008 - 2012 the Chakra Development Team"), ki18n("chakra@chakra-project.org"), "http://chakra-project.org");
     aboutData.addAuthor(ki18n("Manuel Tortosa"), ki18n("Maintainer"), "manutortosa@chakra-project.org", "http://chakra-project.org"); 
     aboutData.addAuthor(ki18n("Dario Freddi"), ki18n("Developer"), "drf@chakra-project.org", "http://drfav.wordpress.com");
     aboutData.addAuthor(ki18n("Lukas Appelhans"), ki18n("Developer"), "boom1992@chakra-project.org", "http://boom1992.wordpress.com");
@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
     aboutData.addAuthor(ki18n("Drake Justice"), ki18n("Developer"), "djustice@chakra-project.org", "");
     aboutData.addAuthor(ki18n("Georg Grabler"), ki18n("Developer"), "ggrabler@gmail.com", "");
     aboutData.addAuthor(ki18n("Daniele Cocca"), ki18n("Developer"), "jmc@chakra-project.org", "");
-    aboutData.setBugAddress("http://chakra-linux.org/bugs/");
+    aboutData.setBugAddress("http://kde-os.tk/bbs/");
 
     KCmdLineArgs::init(argc, argv, &aboutData);
 
@@ -81,7 +81,7 @@ int main(int argc, char *argv[])
     
         if (ram < MIN_MEMORY) {
             int m = KMessageBox::warningContinueCancel(0, i18n("Your system does not meet the minimal memory needed\n"
-                    "for installing Chakra with Tribe (1gb), total available memory: %1 mbytes\n\n"
+                    "for installing KdeOS with Tribe (1gb), total available memory: %1 mbytes\n\n"
                     "Continue at your own risk", ram));
             if (m == KMessageBox::Cancel)
                 return 0;

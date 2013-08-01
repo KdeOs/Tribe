@@ -54,18 +54,18 @@ p, li { white-space: pre-wrap; }
      <property name="text">
       <string>Congratulations, the installation has been completed!
 
-We hope you enjoyed what you have seen as much as we enjoyed creating it.
+We hope you enjoyed what you have seen so far, as much as we enjoyed creating it.
 You can now reboot into the installed system or keep using the LiveCD.
 
 In case you want to check the installation logs,
 take a look into /tmp on the live system or into /var/log on the installed system.
 
-Thanks for using Chakra, and get in touch with us in the forums, share opinions, give advices;
-To put it simple: Get involved! (http://chakra-project.org)
+Thanks for using KdeOS.  Get in touch with us in the forums, share opinions, give advice;
+To put it simple: Want to get involved? (http://kde-os.tk)
 
 Have Fun!
 
-The Chakra Team</string>
+KdeOS</string>
      </property>
      <property name="scaledContents">
       <bool>true</bool>

@@ -253,7 +253,7 @@ void PMHandler::preparePartitions(const Partition* p, Device *dev)
         rootPartition->setFileSystem(FileSystemFactory::create(FileSystem::Ext4,
                                                                rootPartition->firstSector(),
                                                                rootPartition->lastSector(),
-                                                               -1, "Chakra"));
+                                                               -1, "KdeOS"));
         operationStack().push(new NewOperation(*dev, rootPartition));
         m_mounts[dev->deviceNode()].insert(rootPartition->firstSector(), "/");
         qDebug() << "Will create root partition at " << rootPartition->firstSector();

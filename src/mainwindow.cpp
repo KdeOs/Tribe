@@ -581,7 +581,7 @@ void MainWindow::setUpCleanupPage()
     lay->addStretch();
 
     QLabel *logo = new QLabel();
-    logo->setPixmap(KIcon("chakra-shiny").pixmap(128));
+    logo->setPixmap(KIcon("kde").pixmap(128));
     lay->addWidget(logo);
 
     QLabel *l = new QLabel("Cleaning up...");
