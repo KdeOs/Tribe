@@ -21,7 +21,7 @@ job_pre_install()
             if [[ "${netinst}" == "yes" ]]; then
                 pacman -r ${mountpoint} -S ${p} --noconfirm
             else
-                pacman -r ${mountpoint} -Udf ${PKG_OVERLAY}/${p}-* --noconfirm
+                pacman -r ${mountpoint} -Ud --force ${PKG_OVERLAY}/${p}-* --noconfirm
             fi
 	done
 

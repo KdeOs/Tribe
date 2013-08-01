@@ -8,7 +8,7 @@ job_set_keymap()
 	msg_job_start "job_set_keymap"
 
 	#
-	# this checks for the Tribe selected layout, else sets English
+	# this checks for the Tribe selected layout, otherwise sets to US keyboard
 	#
 	if [ -n "$kblayout" ] ; then 
 		msg "detected $kblayout"

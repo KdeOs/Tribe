@@ -71,8 +71,8 @@ job_create_initrd()
     chroot ${mountpoint} /usr/bin/mkinitcpio -p linux >>/tmp/initramfs.log 2>&1
     echo >> /tmp/initramfs.log
     fi
-    if [ -e "/boot/vmlinuz-linux-lts" ] ; then
-    chroot ${mountpoint} /usr/bin/mkinitcpio -p linux-lts >>/tmp/initramfs.log 2>&1
+    if [ -e "/boot/vmlinuz-linux-next" ] ; then
+    chroot ${mountpoint} /usr/bin/mkinitcpio -p linux-next >>/tmp/initramfs.log 2>&1
     echo >> /tmp/initramfs.log
     fi
 

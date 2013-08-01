@@ -55,13 +55,12 @@ job_initialize_target()
 	mkdir -p ${mountpoint}/root/.config
 	cp -v /home/live/.config/Trolltech.conf ${mountpoint}/root/.config/Trolltech.conf
 
-	msg "set Chakra Version"
-	echo "DISTRIB_ID=\"Chakra\"" > "${mountpoint}/etc/lsb-release"
-	echo "DISTRIB_RELEASE=\"chakra-version\"" >> "${mountpoint}/etc/lsb-release"
-	echo "DISTRIB_CODENAME=\"code-name\"" >> "${mountpoint}/etc/lsb-release"
-	echo "DISTRIB_DESCRIPTION=\"Chakra Linux\"" >> "${mountpoint}/etc/lsb-release"
-	echo "Chakra Linux release chakra-version (code-name)" > "${mountpoint}/etc/chakra-release"
-	echo "Chakra Linux (chakra-version - code-name) \r  (\n) (\l)" > "${mountpoint}/etc/issue"
+	msg "set KdeOS Version"
+	echo "DISTRIB_ID=\"KdeOS\"" > "${mountpoint}/etc/lsb-release"
+	echo "DISTRIB_RELEASE=\"kdeos-version\"" >> "${mountpoint}/etc/lsb-release"
+	echo "DISTRIB_DESCRIPTION=\"KdeOS\"" >> "${mountpoint}/etc/lsb-release"
+	echo "KdeOS release kdeos-version" > "${mountpoint}/etc/kdeos-release"
+	echo "KdeOS (kdeos-version) \r  (\n) (\l)" > "${mountpoint}/etc/issue"
 
 	msg "fix hwclock"
 	mkdir -pv ${mountpoint}/var/lib/hwclock
