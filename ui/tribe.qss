@@ -20,7 +20,7 @@ Left sidebar
 */
 
 #leftSidebar {
-        color: #eeeeee;
+        color: #343434;
         border-image: url(:/Images/images/sidebar.svg);
 }
 
@@ -30,8 +30,8 @@ QDialogs
  */
 
 QDialog {
-        color: #eeeeee;
-        background-image: url(:/Images/images/background-dialog.svg);
+        color: #343434;
+        background-image: url(:/Images/images/background.svg);
         background-repeat: no-repeat;
         background-position: bottom center;
         background-color: #000000; 
@@ -43,7 +43,7 @@ QLabels
  */
 
 QLabel {
-        color: #eeeeee;
+        color: #343434;
 }
 
 
@@ -64,9 +64,9 @@ Groupboxes
 */
 
 QGroupBox {
-        color: #eeeeee;
+        color: #343434;
         background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                          stop: 0 #000000, stop: 1 #000000);
+                                          stop: 0 #878787, stop: 1 #4d4d4d);
 }
 
 /*
@@ -74,7 +74,7 @@ Buttons
 */
 
 QPushButton {
-        color: #eeeeee;
+        color: #343434;
         border-image: url(:/Images/images/button100x32.svg) 3 10 3 10;
         border-top: 3px transparent;
         border-bottom: 3px transparent;
@@ -96,7 +96,7 @@ QPushButton::disabled {
 }
 
 QPushButton::hover {
-        color: #eeeeee;
+        color: #343434;
         border-image: url(:/Images/images/button-hover100x32.svg) 3 10 3 10;
         border-top: 3px transparent;
         border-bottom: 3px transparent;
@@ -107,7 +107,7 @@ QPushButton::hover {
 }
 
 QPushButton::pressed {
-        color: #eeeeee;
+        color: #343434;
         border-image: url(:/Images/images/button-pressed100x32.svg) 3 10 3 10;
         border-top: 3px transparent;
         border-bottom: 3px transparent;
@@ -370,7 +370,7 @@ QTextEdit, QListView
 */
 QTextEdit, QListView {
         color: #eeeeee;
-        background-color: #000000;
+        background-color: #4d4d4d;
         border: 1px solid #6b6b6b;
         border-radius: 4px;
         selection-background-color: #0057ae;
