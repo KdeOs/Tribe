@@ -24,7 +24,7 @@
 #define INSTALLATION_TARGET "/mnt/install.root"
 
 /* Defines Boot Mount Point */
-#define BOOTMNT_POINT "/bootmnt/chakra/@ARCH@"
+#define BOOTMNT_POINT "/bootmnt/kdeos/@ARCH@"
 
 /* Defines the version */
 #define TRIBE_VERSION "source build/from git"

@@ -188,13 +188,13 @@ void ConfigPage::result(KJob* job)
     }
 
     if (m_incomingExtension == ".jpeg") {
-        KUrl r(QUrl("http://chakra-project.org/packages/screenshots/" +
+        KUrl r(QUrl("http://kde-os.tk/packages/screenshots/" +
                     m_incomingList.at(m_incomingIncr) + m_incomingExtension));
         m_job = KIO::get(r, KIO::Reload, KIO::Overwrite | KIO::HideProgressInfo);
         connect(m_job, SIGNAL(data(KIO::Job*,QByteArray)), this, SLOT(incomingData(KIO::Job*, QByteArray)));
         connect(m_job, SIGNAL(result(KJob*)), this, SLOT(result(KJob*)));
     } else {
-        KUrl r(QUrl("http://mirror.rit.edu/kdemod/bundles" + m_currentBranch + "/" +
+        KUrl r(QUrl("http://kde-os.tk" + m_currentBranch + "/" +
                     m_currentArch + "/" + m_incomingList.at(m_incomingIncr)));
         m_job = KIO::get(r, KIO::Reload, KIO::Overwrite | KIO::HideProgressInfo);
         connect(m_job, SIGNAL(data(KIO::Job*,QByteArray)), this, SLOT(incomingData(KIO::Job*, QByteArray)));
@@ -261,7 +261,7 @@ void ConfigPage::bundlesDownloadButtonClicked()
              this, SLOT(handleNetworkData(QNetworkReply*)));
 
     //use the url of the preferred mirror
-    networkManager.get(QNetworkRequest(QString("http://chakra-project.org")));
+    networkManager.get(QNetworkRequest(QString("http://kde-os.tk")));
     if (m_currentOnlineStatus == "Offline") {
         QString completeMessage = i18n("Sorry, you have no internet connection at the moment \n"
                                        "Will stop bundle(s) installation now");
@@ -297,7 +297,7 @@ void ConfigPage::bundlesDownloadButtonClicked()
     m_process = new QProcess(this);
     m_process->setProcessChannelMode(QProcess::MergedChannels);
 
-    // check stable/testing
+    // check stable/build
     QFile pacmanConf("/etc/pacman.conf", this);
     pacmanConf.open(QIODevice::ReadOnly);
     QString sPacmanConf(pacmanConf.readAll());
@@ -323,7 +323,7 @@ void ConfigPage::bundlesDownloadButtonClicked()
 
     // TODO: use QJSon here instead, that's crap.
     foreach (QString bundle, checkedList) {
-        m_process->start("bash -c \"echo $(rsync -avh --list-only chakra@chakra-project.org::chakra/bundles" +
+        m_process->start("bash -c \"echo $(rsync -avh --list-only kdeos@kde-os.tk::kdeos/bundles" +
                           m_currentBranch + "/" + m_currentArch +
                          "/" + bundle + "*  | cut -d\':\' -f3 | cut -d\' \' -f2)\"");
         m_process->waitForFinished();
@@ -335,7 +335,7 @@ void ConfigPage::bundlesDownloadButtonClicked()
         }
     }
 
-    KUrl r(QUrl("http://mirror.rit.edu/kdemod/bundles" + m_currentBranch + "/" +
+    KUrl r(QUrl("http://kde-os.tk/bundles" + m_currentBranch + "/" +
                  m_currentArch + "/" + m_incomingList.at(m_incomingIncr)));
     m_job = KIO::get(r, KIO::Reload, KIO::Overwrite | KIO::HideProgressInfo);
     connect(m_job, SIGNAL(data(KIO::Job*,QByteArray)), this, SLOT(incomingData(KIO::Job*, QByteArray)));
@@ -507,7 +507,7 @@ void ConfigPage::bootloaderInstalled(int exitCode, QProcess::ExitStatus exitStat
         qDebug() << ">> GRUB2: Exitcode " << exitCode;
         qDebug() << ">> GRUB2: Setup might got wrong...";
         QString completeMessage = i18n("Bootloader-Setup finished with Exitcode: %1\n"
-                                       "Some might went wrong. Before reboot it is recommended \n"
+                                       "Seems something went wrong. Before reboot it is recommended \n"
                                        "to check %2/boot/grub/grub.cfg. \n"
                                        ).arg(exitCode).arg(INSTALLATION_TARGET);
 

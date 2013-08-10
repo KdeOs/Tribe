@@ -3,7 +3,6 @@
  *               2009        Lukas Appelhans <l.appelhans@gmx.de>
  *               2010        Drake Justice <djustice.kde@gmail.com>
  *               2013        Manuel Tortosa <manutorotsa@chalra-project.org>
- *               2011-2013   Anke Boersma <demm@kde-os.tk>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
