@@ -26,6 +26,7 @@ NetInstPage::NetInstPage(QWidget *parent)
     m_groups["burn"]            = {i18n("Burning"),         i18n("Set of packages for disc burning")};
     m_groups["printing"]        = {i18n("Printing"),        i18n("Print much?")};
     m_groups["multimedia"]      = {i18n("Multimedia"),      i18n("Music and video players")};
+    m_groups["gtk-integration"] = {i18n("Gtk Integration"), i18n("Integrate Gtk applications with plasma")};
     m_groups["misc"]            = {i18n("Miscelaneous"),    i18n("Useful tools and apps")};
 }
 
