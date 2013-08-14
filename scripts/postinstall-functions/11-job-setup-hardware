@@ -38,8 +38,8 @@ job_setup_hardware()
 		if [[ "${netinst}" == "yes" ]]; then
 		    /usr/bin/pacman -r ${mountpoint} -S nvidia-utils nvidia --noconfirm
 		else
-            /usr/bin/pacman -r ${mountpoint} -Udf ${PKG_OVERLAY}/nvidia-utils-31* --noconfirm
-            /usr/bin/pacman -r ${mountpoint} -Udf ${PKG_OVERLAY}/nvidia-31* --noconfirm
+            /usr/bin/pacman -r ${mountpoint} -Ud --force ${PKG_OVERLAY}/nvidia-utils-3* --noconfirm
+            /usr/bin/pacman -r ${mountpoint} -Ud --force ${PKG_OVERLAY}/nvidia-3* --noconfirm
         fi
 
 	elif [ -e "/tmp/nvidia-304xx" ] ; then
@@ -54,7 +54,7 @@ job_setup_hardware()
         if [[ "${netinst}" == "yes" ]]; then
             /usr/bin/pacman -r ${mountpoint} -S nvidia-304xx nvidia-304xx-utils --noconfirm
         else
-            pacman -r ${mountpoint} -Udf ${PKG_OVERLAY}/nvidia-304xx* --noconfirm
+            pacman -r ${mountpoint} -Ud --force ${PKG_OVERLAY}/nvidia-304xx* --noconfirm
         fi
 
 	elif [ -e "/tmp/nvidia-173xx" ] ; then
@@ -69,7 +69,7 @@ job_setup_hardware()
         if [[ "${netinst}" == "yes" ]]; then
             /usr/bin/pacman -r ${mountpoint} -S nvidia-173xx nvidia-173-utils --noconfirm
         else
-            pacman -r ${mountpoint} -Udf ${PKG_OVERLAY}/nvidia-173xx* --noconfirm
+            pacman -r ${mountpoint} -Ud --force ${PKG_OVERLAY}/nvidia-173xx* --noconfirm
         fi
 
 	elif [ -e "/tmp/catalyst" ] ; then
@@ -86,8 +86,8 @@ job_setup_hardware()
         if [[ "${netinst}" == "yes" ]]; then
             /usr/bin/pacman -r ${mountpoint} -S catalyst catalyst-utils --noconfirm
         else
-            /usr/bin/pacman -r ${mountpoint} -Udf ${PKG_OVERLAY}/catalyst-utils* --noconfirm
-            /usr/bin/pacman -r ${mountpoint} -Udf ${PKG_OVERLAY}/catalyst-1* --noconfirm
+            /usr/bin/pacman -r ${mountpoint} -Ud --force ${PKG_OVERLAY}/catalyst-utils* --noconfirm
+            /usr/bin/pacman -r ${mountpoint} -Ud --force ${PKG_OVERLAY}/catalyst-1* --noconfirm
         fi
 
 	elif [ -e "/tmp/catalyst-legacy" ] ; then
@@ -104,8 +104,8 @@ job_setup_hardware()
 		if [[ "${netinst}" == "yes" ]]; then
             /usr/bin/pacman -r ${mountpoint} -S catalyst-legacy catalyst-legacy-utils --noconfirm
         else
-            /usr/bin/pacman -r ${mountpoint} -Udf ${PKG_OVERLAY}/catalyst-legacy-utils* --noconfirm
-            /usr/bin/pacman -r ${mountpoint} -Udf ${PKG_OVERLAY}/catalyst-legacy-1* --noconfirm
+            /usr/bin/pacman -r ${mountpoint} -Ud --force ${PKG_OVERLAY}/catalyst-legacy-utils* --noconfirm
+            /usr/bin/pacman -r ${mountpoint} -Ud --force ${PKG_OVERLAY}/catalyst-legacy-1* --noconfirm
         fi
 	fi
 

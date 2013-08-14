@@ -30,10 +30,10 @@ job_install_grub2()
     # set grub theme
     msg "setting grub theme: Monochrome"
     sed -i -e 's,.*GRUB_THEME=.*,GRUB_THEME="/usr/share/grub/themes/monochrome/theme.txt",' ${mountpoint}/etc/default/grub
-    sed -i -e 's,.*GRUB_GFXMODE=.*,GRUB_THEME="1024x768",' ${mountpoint}/etc/default/grub
+    sed -i -e 's,.*GRUB_GFXMODE=.*,GRUB_GFXMODE=1024x768,' ${mountpoint}/etc/default/grub
 
     msg "generating []/boot/grub/grub.cfg"
-    chroot ${mountpoint} grub-mkconfig -o /boot/grub/grub.cfg --skip-resume >> /tmp/grub2.log 2>&1
+    chroot ${mountpoint} grub-mkconfig -o /boot/grub/grub.cfg >> /tmp/grub2.log 2>&1
 
     if [ "${use_swap}" = "yes" ] ; then
 	_sdevice=$(echo /dev/${target_swap})
