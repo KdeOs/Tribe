@@ -15,9 +15,8 @@ job_regenerate_locales()
 	#
 
 	# clean out unneeded comments and stuff
-	cat ${mountpoint}/etc/locale.gen | grep "#" | grep -v "live system" > ${mountpoint}/etc/locale.gen.new
 	rm -rf ${mountpoint}/etc/locale.gen
-	mv ${mountpoint}/etc/locale.gen.new ${mountpoint}/etc/locale.gen
+	cp ${mountpoint}/etc/locale.gen.bak ${mountpoint}/etc/locale.gen
 
 	msg "create /etc/locale.conf"
 	msg "LANG=${locale}"
