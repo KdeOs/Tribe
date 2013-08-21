@@ -119,8 +119,8 @@ job_configure_users()
 	fi
 	
 	# fix SUID to capable permissions on iputils
-        setcap cap_net_raw=ep ${work_dir}usr/bin/ping  2>/dev/null || chmod +s ${work_dir}usr/bin/ping 
-        setcap cap_net_raw=ep ${work_dir}usr/bin/ping6 2>/dev/null || chmod +s ${work_dir}usr/bin/ping6
+        setcap cap_net_raw=ep ${mountpoint}/usr/bin/ping  2>/dev/null || chmod +s ${mountpoint}/usr/bin/ping 
+        setcap cap_net_raw=ep ${mountpoint}/usr/bin/ping6 2>/dev/null || chmod +s ${mountpoint}/usr/bin/ping6
 
 	msg "ensure correct sudoers permissions"
 	echo "%bundle ALL=NOPASSWD: /bin/mount -o loop -t squashfs *" >> ${mountpoint}/etc/sudoers
