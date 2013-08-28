@@ -2,7 +2,7 @@
  * Copyright (c) 2008, 2009  Dario Freddi <drf@chakra-project.org>
  *               2010        Drake Justice <djustice.kde@gmail.com>
  *               2012        Manuel Tortosa (manutortosa@chakra-project.org)
- *               2011-2013   Anke Boersma <demm@kde-os.tk>
+ *               2011-2013   Anke Boersma <demmkaos@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -96,7 +96,7 @@ void ConfigPage::createWidget()
     // first call to check internet connection
     connect(&networkManager, SIGNAL(finished(QNetworkReply*)),
              this, SLOT(handleNetworkData(QNetworkReply*)));
-    networkManager.get(QNetworkRequest(QString("http://kde-os.tk")));
+    networkManager.get(QNetworkRequest(QString("http://kaosx.us")));
 
     // check installed kde version
     /* QProcess proc;
@@ -188,13 +188,13 @@ void ConfigPage::result(KJob* job)
     }
 
     if (m_incomingExtension == ".jpeg") {
-        KUrl r(QUrl("http://kde-os.tk/packages/screenshots/" +
+        KUrl r(QUrl("http://kaosx.us/packages/screenshots/" +
                     m_incomingList.at(m_incomingIncr) + m_incomingExtension));
         m_job = KIO::get(r, KIO::Reload, KIO::Overwrite | KIO::HideProgressInfo);
         connect(m_job, SIGNAL(data(KIO::Job*,QByteArray)), this, SLOT(incomingData(KIO::Job*, QByteArray)));
         connect(m_job, SIGNAL(result(KJob*)), this, SLOT(result(KJob*)));
     } else {
-        KUrl r(QUrl("http://kde-os.tk" + m_currentBranch + "/" +
+        KUrl r(QUrl("http://kaosx.us" + m_currentBranch + "/" +
                     m_currentArch + "/" + m_incomingList.at(m_incomingIncr)));
         m_job = KIO::get(r, KIO::Reload, KIO::Overwrite | KIO::HideProgressInfo);
         connect(m_job, SIGNAL(data(KIO::Job*,QByteArray)), this, SLOT(incomingData(KIO::Job*, QByteArray)));
@@ -261,7 +261,7 @@ void ConfigPage::bundlesDownloadButtonClicked()
              this, SLOT(handleNetworkData(QNetworkReply*)));
 
     //use the url of the preferred mirror
-    networkManager.get(QNetworkRequest(QString("http://kde-os.tk")));
+    networkManager.get(QNetworkRequest(QString("http://kaosx.us")));
     if (m_currentOnlineStatus == "Offline") {
         QString completeMessage = i18n("Sorry, you have no internet connection at the moment \n"
                                        "Will stop bundle(s) installation now");
@@ -323,7 +323,7 @@ void ConfigPage::bundlesDownloadButtonClicked()
 
     // TODO: use QJSon here instead, that's crap.
     foreach (QString bundle, checkedList) {
-        m_process->start("bash -c \"echo $(rsync -avh --list-only kdeos@kde-os.tk::kdeos/bundles" +
+        m_process->start("bash -c \"echo $(rsync -avh --list-only kaos@kaosx.us::kaos/bundles" +
                           m_currentBranch + "/" + m_currentArch +
                          "/" + bundle + "*  | cut -d\':\' -f3 | cut -d\' \' -f2)\"");
         m_process->waitForFinished();
@@ -335,7 +335,7 @@ void ConfigPage::bundlesDownloadButtonClicked()
         }
     }
 
-    KUrl r(QUrl("http://kde-os.tk/bundles" + m_currentBranch + "/" +
+    KUrl r(QUrl("http://kaosx.us/bundles" + m_currentBranch + "/" +
                  m_currentArch + "/" + m_incomingList.at(m_incomingIncr)));
     m_job = KIO::get(r, KIO::Reload, KIO::Overwrite | KIO::HideProgressInfo);
     connect(m_job, SIGNAL(data(KIO::Job*,QByteArray)), this, SLOT(incomingData(KIO::Job*, QByteArray)));
