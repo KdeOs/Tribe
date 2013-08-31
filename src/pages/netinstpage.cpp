@@ -70,7 +70,7 @@ void NetInstPage::aboutToGoToPrevious()
 
 bool NetInstPage::loadGroupList()
 {
-    QString confUrl("https://github.com/KaOSx/Tribe/raw/master/data/xx.conf");
+    QString confUrl("https://github.com/KaOSx/Tribe/raw/master/data/netinstall.conf");
 
     KIO::Job* getJob = KIO::get(confUrl, KIO::Reload, KIO::Overwrite | KIO::HideProgressInfo);
     QByteArray data;

@@ -86,7 +86,7 @@ job_configure_users()
 	    mv -v ${mountpoint}/home/${user_name}/.kde4/share/config/kdeglobals ${mountpoint}/home/${user_name}/.backup/${timestamp}/
 	fi
 
-	msg "setup KdeOS settings"
+	msg "setup KaOS settings"
 	cp -vf /etc/skel/ksplashrc ${mountpoint}/home/${user_name}/.kde4/share/config/ksplashrc
 	cp -vf /etc/skel/plasma-desktop-appletsrc ${mountpoint}/home/${user_name}/.kde4/share/config/plasma-desktop-appletsrc
 	cp -vf /etc/skel/plasmarc ${mountpoint}/home/${user_name}/.kde4/share/config/plasmarc
