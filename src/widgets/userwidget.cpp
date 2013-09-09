@@ -218,7 +218,7 @@ void UserWidget::testFields()
 void UserWidget::avatarClicked()
 {
     m_avatarDialog->show();
-    m_avatarDialog->setGeometry(QStyle::alignedRect(Qt::LeftToRight, Qt::AlignCenter, m_avatarDialog->size(), qApp->desktop()->availableGeometry()));
+    m_avatarDialog->setGeometry(QStyle::alignedRect(Qt::LeftToRight, Qt::AlignLeft, m_avatarDialog->size(), qApp->desktop()->availableGeometry()));
 }
 
 void UserWidget::updatePasswordStrengthBar(const QString& newpass_)

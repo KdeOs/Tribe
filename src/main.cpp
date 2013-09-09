@@ -41,7 +41,7 @@
 
 int main(int argc, char *argv[])
 {
-    KAboutData aboutData("tribe", 0, ki18n("Tribe"),
+    KAboutData aboutData("installer", 0, ki18n("Installer"),
     TRIBE_VERSION, ki18n("Graphical Installer for KaOS, forked from the Chakra-Project"), KAboutData::License_GPL,
                         ki18n("(c) 2008 - 2012 the Chakra Development Team"), ki18n("chakra@chakra-project.org"), "http://chakra-project.org");
     aboutData.addAuthor(ki18n("Manuel Tortosa"), ki18n("Maintainer"), "manutortosa@chakra-project.org", "http://chakra-project.org"); 
@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
     KCmdLineArgs::init(argc, argv, &aboutData);
 
     if (!KUniqueApplication::start()) {
-        qWarning("Tribe is already running!\n");
+        qWarning("Installer is already running!\n");
         return 0;
     }
 
@@ -77,11 +77,11 @@ int main(int argc, char *argv[])
         totalmem.remove(QRegExp("[^\\d]"));
         uint ram = (totalmem.toUInt() / 1024);
 
-        qDebug() << ":: Starting Tribe, RAM available for this install: " << ram << " Mbytes";
+        qDebug() << ":: Starting Installer, RAM available for this install: " << ram << " Mbytes";
     
         if (ram < MIN_MEMORY) {
             int m = KMessageBox::warningContinueCancel(0, i18n("Your system does not meet the minimal memory needed\n"
-                    "for installing KaOS with Tribe (1gb), total available memory: %1 mbytes\n\n"
+                    "for installing KaOS with Installer (1gb), total available memory: %1 mbytes\n\n"
                     "Continue at your own risk", ram));
             if (m == KMessageBox::Cancel)
                 return 0;
@@ -102,7 +102,7 @@ int main(int argc, char *argv[])
     }
 
     if (pu) {
-        int r = KMessageBox::warningContinueCancel(0, i18n("It looks like your power adaptor is unplugged. "
+        int r = KMessageBox::warningContinueCancel(0, i18n("It looks like your power adaptar is unplugged. "
                 "Installation is a delicate and lenghty process, hence it is strongly advised to have your "
                 "PC connected to AC to minimize possible risks."));
         if (r == KMessageBox::Cancel) {

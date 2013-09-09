@@ -28,6 +28,10 @@ job_configure_users()
 
 	msg "create common dirs"
 	chroot ${mountpoint} /bin/mkdir -p -v /home/${user_name}/Desktop
+	chroot ${mountpoint} /bin/mkdir -p -v /home/${user_name}/Downloads
+	chroot ${mountpoint} /bin/mkdir -p -v /home/${user_name}/Images
+	chroot ${mountpoint} /bin/mkdir -p -v /home/${user_name}/Music
+	chroot ${mountpoint} /bin/mkdir -p -v /home/${user_name}/Video
 	chroot ${mountpoint} /bin/mkdir -p -v /home/${user_name}/.kde4/Autostart
 	chroot ${mountpoint} /bin/mkdir -p -v /home/${user_name}/.kde4/env
 	chroot ${mountpoint} /bin/mkdir -p -v /home/${user_name}/.kde4/share/config
@@ -132,6 +136,10 @@ job_configure_users()
 	msg "chown ${user_name} /home/${user_name}"
 	chroot ${mountpoint} /bin/chown -v ${user_name}:users /home/${user_name}
 	chroot ${mountpoint} /bin/chown -vR ${user_name}:users /home/${user_name}/Desktop
+	chroot ${mountpoint} /bin/chown -vR ${user_name}:users /home/${user_name}/Downloads
+	chroot ${mountpoint} /bin/chown -vR ${user_name}:users /home/${user_name}/Images
+	chroot ${mountpoint} /bin/chown -vR ${user_name}:users /home/${user_name}/Music
+	chroot ${mountpoint} /bin/chown -vR ${user_name}:users /home/${user_name}/Video
 	msg "chown ${user_name} /home/${user_name}/.*"
 	chroot ${mountpoint} /usr/bin/find /home/${user_name}/ -maxdepth 1 -name '.*' -exec /bin/chown -vR ${user_name}:users '{}' \;
 
