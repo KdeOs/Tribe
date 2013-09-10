@@ -45,7 +45,7 @@ MainWindow::MainWindow(QWidget *parent)
                                                  "</head>"
                                                  "<body style=\"font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;\">"
                                                     "<p style=\"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">"
-                                                       "<span style=\"font-family:'Bitstream Vera Sans'; font-size:7pt; color:#ffffff;\">" +
+                                                       "<span style=\"font-family:'Bitstream Vera Sans'; font-size:7pt; color:#626160;\">" +
                                                           QString(TRIBE_BUILD_REVISION) +
                                                        "</span>"
                                                     "</p>"
