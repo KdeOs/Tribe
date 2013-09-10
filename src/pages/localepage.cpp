@@ -68,7 +68,7 @@ void LocalePage::createWidget()
     marble->hide();
     marble->installEventFilter(this);
     marble->model()->addGeoDataFile(QString(DATA_INSTALL_DIR) + "/marble/data/placemarks/cities.kml");
-    marble->setMapThemeId("earth/bluemarble/bluemarble.dgml");
+    marble->setMapThemeId("earth/srtm/srtm.dgml");
     marble->setShowAtmosphere(true);
     marble->setCenterLatitude(35.0);
     marble->setCenterLongitude(-28.0);
