@@ -74,10 +74,10 @@ Buttons
 QPushButton {
         color: #F7F7F7;
         border-image: url(:/Images/images/button100x32.svg) 3 10 3 10;
-        border-top: 3px transparent;
-        border-bottom: 3px transparent;
-        border-right: 10px transparent;
-        border-left: 10px transparent;
+        border-top: 0px transparent;
+        border-bottom: 0px transparent;
+        border-right: 0px transparent;
+        border-left: 0px transparent;
         font: bold 12px;
         icon-size: 20px;
 }
@@ -85,10 +85,10 @@ QPushButton {
 QPushButton::disabled {
         color: #959595;
         border-image: url(:/Images/images/button100x32.svg) 3 10 3 10;
-        border-top: 3px transparent;
-        border-bottom: 3px transparent;
-        border-right: 10px transparent;
-        border-left: 10px transparent;
+        border-top: 0px transparent;
+        border-bottom: 0px transparent;
+        border-right: 0px transparent;
+        border-left: 0px transparent;
         font: bold 12px;
         icon-size: 20px;
 }
@@ -96,10 +96,10 @@ QPushButton::disabled {
 QPushButton::hover {
         color: #1B1B1B;
         border-image: url(:/Images/images/button-hover100x32.svg) 3 10 3 10;
-        border-top: 3px transparent;
-        border-bottom: 3px transparent;
-        border-right: 10px transparent;
-        border-left: 10x transparent;
+        border-top: 0px transparent;
+        border-bottom: 0px transparent;
+        border-right: 0px transparent;
+        border-left: 0x transparent;
         font: bold 12px;
         icon-size: 20px;
 }
@@ -107,10 +107,10 @@ QPushButton::hover {
 QPushButton::pressed {
         color: #5A5A5A;
         border-image: url(:/Images/images/button-pressed100x32.svg) 3 10 3 10;
-        border-top: 3px transparent;
-        border-bottom: 3px transparent;
-        border-right: 10px transparent;
-        border-left: 10px transparent;
+        border-top: 0px transparent;
+        border-bottom: 0px transparent;
+        border-right: 0px transparent;
+        border-left: 0px transparent;
         font: bold 12px;
         icon-size: 20px;
 }
