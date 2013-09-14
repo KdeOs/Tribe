@@ -203,7 +203,7 @@ void InstallationHandler::copyFiles()
         QStringList arguments;
         arguments << "-f" << "-d" << INSTALLATION_TARGET << QString("%1/root-image.sqfs").arg(BOOTMNT_POINT);
 
-        emit streamLabel(i18n("Installing the system ..."));
+        emit streamLabel(i18n("Installing the system..."));
         m_process->start("unsquashfs", arguments);
         break;
     }
@@ -234,7 +234,7 @@ void InstallationHandler::jobDone(int result)
         emit errorInstalling(i18n("Error copying files"));
         return;
     } else {
-        emit streamLabel(i18n("Removing packages whose license has been declined ..."));
+        emit streamLabel(i18n("Removing packages whose license has been declined..."));
 
         postRemove();
     }
@@ -275,7 +275,7 @@ void InstallationHandler::parsePacmanOutput()
             if (msg.contains("start")) {
                 emit streamLabel(i18n("Starting Netinstall..."));
             } else if (msg.contains("install")) {
-                emit streamLabel(i18n("Installing Packages..."));
+                emit streamLabel(i18n("Installing packages..."));
             }
         } else if (out.startsWith("Targets")) {
             int start = 9;
@@ -283,7 +283,7 @@ void InstallationHandler::parsePacmanOutput()
             // search for number starting at offset 8
             if (end != -1) {
                 totalPackages = out.mid(start, end - start).toInt();
-                emit streamLabel(i18n("Downloading Packages..."));
+                emit streamLabel(i18n("Downloading packages..."));
             }
         } else {
             QRegExp rx("(downloading|installing) (.*)\\.\\.\\.");
@@ -327,7 +327,7 @@ void InstallationHandler::readyPost()
     qDebug() << " :: postinstall command: \n" << m_postcommand;
 
     m_postjob = "initialize-target";
-    m_postlabel = i18n("Initializing target ...");
+    m_postlabel = i18n("Initializing target...");
 
     postInstall();
 }
@@ -426,7 +426,7 @@ void InstallationHandler::postRemove()
                 m_removeLicenses.count() << "packages to be removed";
 
     if (m_stringlistIterator == m_removeLicenses.constEnd()) {
-        emit streamLabel(i18n("Please wait, configuring the new system ..."));
+        emit streamLabel(i18n("Please wait, configuring the new system..."));
 
         QTimer::singleShot(100, this, SLOT(readyPost()));
 
@@ -505,7 +505,7 @@ void InstallationHandler::postInstallDone(int eC, QProcess::ExitStatus eS)
 
     if (eC != 0) {
         emit errorInstalling(i18n("Error in Postinstall script. See log for more details"));
-        qDebug() << " :: !! Failed during postinstall somewhere..";
+        qDebug() << " :: !! Failed during postinstall somewhere...";
         return;
     } else {
         // next job
@@ -513,7 +513,7 @@ void InstallationHandler::postInstallDone(int eC, QProcess::ExitStatus eS)
         int percentage = 0;
 
         if (m_postjob == "initialize-target") {
-            emit streamLabel(i18n("Creating user accounts ..."));
+            emit streamLabel(i18n("Creating user accounts..."));
             setUpUsers(userLoginList());
             m_postjob = "configure-pacman";
             m_postlabel = i18n("Configuring software management...");
@@ -825,7 +825,7 @@ qDebug() << " :: setting user password... : " << m_userLoginList.at(current);
             KIO::NetAccess::synchronousRun(job, 0);
         }
 
-qDebug() << " :: live configuration copied to the user's home";
+qDebug() << " :: live configuration copied to the user's /home";
 
         QProcess::execute("sh " +
                           QString(SCRIPTS_INSTALL_PATH) +

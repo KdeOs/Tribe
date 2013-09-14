@@ -57,9 +57,6 @@ void LocalePage::createWidget()
     kdeLanguageCombo->addItem("");
     localeCombo->addItem("");
 
-    zoomInButton->setIcon(KIcon("zoom-in"));
-    zoomOutButton->setIcon(KIcon("zoom-out"));
-
     // this looks interesting.. finish it. ;)
     locationsSearch->hide();
     locationsView->hide();
@@ -135,13 +132,6 @@ void LocalePage::createWidget()
 
     // trigger changed for new combo box data
     continentChanged();
-
-    connect(zoomInButton,  SIGNAL(clicked()), marble, SLOT(zoomIn()));
-    connect(zoomOutButton, SIGNAL(clicked()), marble, SLOT(zoomOut()));
-
-    connect(zoomSlider, SIGNAL(valueChanged(int)), SLOT(zoom(int)));
-
-    connect(marble, SIGNAL(zoomChanged(int)), this, SLOT(zoomChanged(int)));
 
     connect(continentCombo, SIGNAL(currentIndexChanged(int)), SLOT(continentChanged()));
     connect(regionCombo,    SIGNAL(currentIndexChanged(int)), SLOT(regionChanged()));
@@ -321,13 +311,6 @@ void LocalePage::updateKDELangs(int state)
             }
         }
     }
-}
-
-void LocalePage::zoomChanged(int)
-{
-    disconnect(zoomSlider, SIGNAL(valueChanged(int)), this, SLOT(zoom(int)));
-    zoomSlider->setValue(marble->zoom() / 20);
-    connect(zoomSlider, SIGNAL(valueChanged(int)), this, SLOT(zoom(int)));
 }
 
 bool LocalePage::validate()

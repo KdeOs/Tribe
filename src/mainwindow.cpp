@@ -75,7 +75,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     setCentralWidget(m_centralWidget);
     setWindowFlags(Qt::Window | Qt::WindowMinMaxButtonsHint);
-    setFixedSize(1024,720);
+    setFixedSize(1024,700);
 
     loadPage(m_currentAction);
 }

@@ -44,7 +44,6 @@ private slots:
     void createWidget();
 
     void zoom(int value);
-    void zoomChanged(int value);
 
     void continentChanged();
     void regionChanged();
