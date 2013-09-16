@@ -42,7 +42,7 @@ p, li { white-space: pre-wrap; }
    <item>
     <widget class="QLabel" name="label_5">
      <property name="text">
-      <string>Please select the nearest city on the globe so the installer can suggest the locale and timezone settings for you. You can fine-tune the suggested settings at the bottom of the page. If you cant find your region or city on the globe, you can zoom in by using the slider on the left.</string>
+      <string>Please select the nearest city on the globe so the installer can suggest the locale and timezone settings for you. You can fine-tune the suggested settings at the bottom of the page. Search the globe by dragging to rotate and using the slider to zoom in.</string>
      </property>
      <property name="wordWrap">
       <bool>true</bool>

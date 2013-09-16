@@ -120,7 +120,7 @@ RadioButtons
 */
 
 QRadioButton {
-    color: #eeeeee;
+    color: #3c3c3c;
     spacing: 5px;
 }
 
@@ -157,7 +157,7 @@ CheckBoxes
 
 QCheckBox {
         spacing: 5px;
-        color: #eeeeee;
+        color: #3c3c3c;
 }
 
 QCheckBox::disabled {

@@ -92,6 +92,7 @@ job_configure_users()
 
 	msg "setup KaOS settings"
 	cp -vf /etc/skel/ksplashrc ${mountpoint}/home/${user_name}/.kde4/share/config/ksplashrc
+	cp -vf /etc/skel/kwinrc ${mountpoint}/home/${user_name}/.kde4/share/config/kwinrc
 	cp -vf /etc/skel/plasma-desktop-appletsrc ${mountpoint}/home/${user_name}/.kde4/share/config/plasma-desktop-appletsrc
 	cp -vf /etc/skel/plasmarc ${mountpoint}/home/${user_name}/.kde4/share/config/plasmarc
 	cp -vf /etc/skel/kcmfonts ${mountpoint}/home/${user_name}/.kde4/share/config/kcmfonts

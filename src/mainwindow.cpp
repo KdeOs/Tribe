@@ -3,6 +3,7 @@
  * Copyright (c) 2008, 2009  Dario Freddi <drf@chakra-project.org>
  *               2008        Lukas Appelhans <l.appelhans@gmx.de>
  *               2010        Drake Justice <djustice.kde@gmail.com>
+ *               2013        Anke Boersma <demm@kaosx.us>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

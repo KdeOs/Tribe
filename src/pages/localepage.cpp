@@ -1,6 +1,7 @@
 /***************************************************************************
  *   Copyright (C) 2008 by Lukas Appelhans (l.appelhans@gmx.de)            *
  *                 2013 Manuel Tortosa (manutortosa@chakra-project.org)    *
+ *                 2013 Anke Boersma (demm@kaosx.us)                       *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
