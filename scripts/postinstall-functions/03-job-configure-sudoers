@@ -7,7 +7,7 @@ job_configure_sudoers()
 	# add given user to sudoers
 	msg "adding the user to sudoers"
 	echo >>${mountpoint}/etc/sudoers
-	echo "# user created during kdeos setup" >>${mountpoint}/etc/sudoers
+	echo "# user created during kaos setup" >>${mountpoint}/etc/sudoers
 	echo "${user_name}     ALL=(ALL) ALL" >>${mountpoint}/etc/sudoers
 	echo >>${mountpoint}/etc/sudoers
 

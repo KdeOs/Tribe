@@ -55,12 +55,12 @@ job_initialize_target()
 	mkdir -p ${mountpoint}/root/.config
 	cp -v /home/live/.config/Trolltech.conf ${mountpoint}/root/.config/Trolltech.conf
 
-	msg "set KdeOS Version"
-	echo "DISTRIB_ID=\"KdeOS\"" > "${mountpoint}/etc/lsb-release"
-	echo "DISTRIB_RELEASE=\"kdeos-version\"" >> "${mountpoint}/etc/lsb-release"
-	echo "DISTRIB_DESCRIPTION=\"KdeOS\"" >> "${mountpoint}/etc/lsb-release"
-	echo "KdeOs release kdeos-version" > "${mountpoint}/etc/kdeos-release"
-	echo "KdeOS (kdeos-version) \r  (\n) (\l)" > "${mountpoint}/etc/issue"
+	msg "set KaOS Version"
+	echo "DISTRIB_ID=\"KaOS\"" > "${mountpoint}/etc/lsb-release"
+	echo "DISTRIB_RELEASE=\"kaos-version\"" >> "${mountpoint}/etc/lsb-release"
+	echo "DISTRIB_DESCRIPTION=\"KaOS\"" >> "${mountpoint}/etc/lsb-release"
+	echo "KdeOs release kaos-version" > "${mountpoint}/etc/KaOS-release"
+	echo "KaOS (kaos-version) \r  (\n) (\l)" > "${mountpoint}/etc/issue"
 
 	msg "fix hwclock"
 	mkdir -pv ${mountpoint}/var/lib/hwclock

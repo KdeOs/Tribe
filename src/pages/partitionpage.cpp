@@ -73,7 +73,7 @@ bool caseInsensitiveLessThan(const QString& s1, const QString& s2)
 PartitionDelegate::PartitionDelegate(QObject * parent) : QStyledItemDelegate(parent),
                                                          m_lockIcon("object-locked"),
                                                          m_partIcon("partitionmanager"),
-                                                         m_formatIcon("configure")   // use a more suiting icon to indicate formatting, ask Malcer about this one
+                                                         m_formatIcon("games-endturn")   // use a more suiting icon to indicate formatting
 { }
 
 PartitionDelegate::~PartitionDelegate()

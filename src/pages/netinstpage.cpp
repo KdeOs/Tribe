@@ -37,7 +37,7 @@ void NetInstPage::createWidget()
     if (!loadGroupList()) {
         qDebug() << "Not connected";
         ui.netinst->setEnabled(false);
-        ui.netinst->setText(i18n("Network Installation. (Disabled: Unable to fetch package lists, check your network connection)"));
+        ui.netinst->setText(i18n("Network Installation. (Disabled: not an available option at this time)"));
         return;
     }
 
@@ -70,7 +70,7 @@ void NetInstPage::aboutToGoToPrevious()
 
 bool NetInstPage::loadGroupList()
 {
-    QString confUrl("https://github.com/KdeOs/Tribe/raw/master/data/netinstall.conf");
+    QString confUrl("https://github.com/KaOSx/Tribe/raw/master/data/netinstall.conf");
 
     KIO::Job* getJob = KIO::get(confUrl, KIO::Reload, KIO::Overwrite | KIO::HideProgressInfo);
     QByteArray data;

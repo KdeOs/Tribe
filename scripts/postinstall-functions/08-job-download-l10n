@@ -18,7 +18,7 @@ job_download_l10n()
 				msg "no ${KDE_L10N_PREFIX}-${kdelang} available or already installed. skipping"
 			else
 				msg "installing ${KDE_L10N_PREFIX}-${kdelang}"
-				/usr/bin/pacman -r ${mountpoint} -Syf ${KDE_L10N_PREFIX}-${kdelang} --noconfirm
+				/usr/bin/pacman -r ${mountpoint} -Sy ${KDE_L10N_PREFIX}-${kdelang} --noconfirm --force
 			fi
 		else
 			msg "no internet connection available. skipping"
