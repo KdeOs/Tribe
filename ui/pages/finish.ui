@@ -60,12 +60,12 @@ You can now reboot into the installed system or keep using the LiveCD.
 In case you want to check the installation logs,
 take a look into /tmp on the live system or into /var/log on the installed system.
 
-Thanks for using KdeOS.  Get in touch with us in the forums, share opinions, give advice;
+Thanks for using KaOS.  Get in touch with us in the forums, share opinions, give advice;
 To put it simple: Want to get involved? (http://kde-os.tk)
 
 Have Fun!
 
-KdeOS</string>
+KaOS</string>
      </property>
      <property name="scaledContents">
       <bool>true</bool>

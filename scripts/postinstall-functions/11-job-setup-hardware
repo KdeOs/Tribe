@@ -31,9 +31,7 @@ job_setup_hardware()
 
 		msg "removing unneeded packages"
 		/usr/bin/pacman -r ${mountpoint} -Rdd libgl --noconfirm
-		/usr/bin/pacman -r ${mountpoint} -Rdd nouveau-dri --noconfirm
-		/usr/bin/pacman -r ${mountpoint} -Rdd xf86-nv --noconfirm
-		/usr/bin/pacman -r ${mountpoint} -Rdd xf86-nouveau --noconfirm
+		/usr/bin/pacman -r ${mountpoint} -Rdd xf86-video-nouveau --noconfirm
         msg "installing driver"
 		if [[ "${netinst}" == "yes" ]]; then
 		    /usr/bin/pacman -r ${mountpoint} -S nvidia-utils nvidia --noconfirm

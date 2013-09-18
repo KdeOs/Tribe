@@ -7,10 +7,9 @@
 Base widget
 */
 #Base { 
-        background-image: url(:/Images/images/background.svg);
         background-repeat: no-repeat;
         background-position: bottom center;
-        background-color: #000000; 
+        background-color: #EFEFEF; 
 }
 
 
@@ -52,10 +51,9 @@ User creation scrolling areas
 */
 
 #scrollAreaWidgetContents {
-        background-image: url(:/Images/images/background.svg);
         background-repeat: no-repeat;
         background-position: bottom center;
-        background-color: #000000;
+        background-color: #E3E2E2;
 }
 
 
@@ -74,45 +72,45 @@ Buttons
 */
 
 QPushButton {
-        color: #343434;
+        color: #F7F7F7;
         border-image: url(:/Images/images/button100x32.svg) 3 10 3 10;
-        border-top: 3px transparent;
-        border-bottom: 3px transparent;
-        border-right: 10px transparent;
-        border-left: 10px transparent;
+        border-top: 0px transparent;
+        border-bottom: 0px transparent;
+        border-right: 0px transparent;
+        border-left: 0px transparent;
         font: bold 12px;
         icon-size: 20px;
 }
 
 QPushButton::disabled {
-        color: #dddddd;
+        color: #959595;
         border-image: url(:/Images/images/button100x32.svg) 3 10 3 10;
-        border-top: 3px transparent;
-        border-bottom: 3px transparent;
-        border-right: 10px transparent;
-        border-left: 10px transparent;
+        border-top: 0px transparent;
+        border-bottom: 0px transparent;
+        border-right: 0px transparent;
+        border-left: 0px transparent;
         font: bold 12px;
         icon-size: 20px;
 }
 
 QPushButton::hover {
-        color: #343434;
+        color: #1B1B1B;
         border-image: url(:/Images/images/button-hover100x32.svg) 3 10 3 10;
-        border-top: 3px transparent;
-        border-bottom: 3px transparent;
-        border-right: 10px transparent;
-        border-left: 10px transparent;
+        border-top: 0px transparent;
+        border-bottom: 0px transparent;
+        border-right: 0px transparent;
+        border-left: 0x transparent;
         font: bold 12px;
         icon-size: 20px;
 }
 
 QPushButton::pressed {
-        color: #343434;
+        color: #5A5A5A;
         border-image: url(:/Images/images/button-pressed100x32.svg) 3 10 3 10;
-        border-top: 3px transparent;
-        border-bottom: 3px transparent;
-        border-right: 10px transparent;
-        border-left: 10px transparent;
+        border-top: 0px transparent;
+        border-bottom: 0px transparent;
+        border-right: 0px transparent;
+        border-left: 0px transparent;
         font: bold 12px;
         icon-size: 20px;
 }
@@ -122,7 +120,7 @@ RadioButtons
 */
 
 QRadioButton {
-    color: #eeeeee;
+    color: #3c3c3c;
     spacing: 5px;
 }
 
@@ -159,7 +157,7 @@ CheckBoxes
 
 QCheckBox {
         spacing: 5px;
-        color: #eeeeee;
+        color: #3c3c3c;
 }
 
 QCheckBox::disabled {

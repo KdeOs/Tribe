@@ -3,6 +3,7 @@
  * Copyright (c) 2008, 2009  Dario Freddi <drf@chakra-project.org>
  *               2008        Lukas Appelhans <l.appelhans@gmx.de>
  *               2010        Drake Justice <djustice.kde@gmail.com>
+ *               2013        Anke Boersma <demm@kaosx.us>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -29,7 +30,7 @@
 
 MainWindow::MainWindow(QWidget *parent)
           : KMainWindow(parent,
-                       (Qt::WindowFlags) KDE_DEFAULT_WINDOWFLAGS | Qt::FramelessWindowHint)
+                       (Qt::WindowFlags) KDE_DEFAULT_WINDOWFLAGS | Qt::WindowMinMaxButtonsHint)
 {
     m_centralWidget = new QWidget(this);
     m_ui.setupUi(m_centralWidget);
@@ -45,7 +46,7 @@ MainWindow::MainWindow(QWidget *parent)
                                                  "</head>"
                                                  "<body style=\"font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;\">"
                                                     "<p style=\"margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">"
-                                                       "<span style=\"font-family:'Bitstream Vera Sans'; font-size:7pt; color:#aa0000;\">" +
+                                                       "<span style=\"font-family:'Bitstream Vera Sans'; font-size:7pt; color:#626160;\">" +
                                                           QString(TRIBE_BUILD_REVISION) +
                                                        "</span>"
                                                     "</p>"
@@ -74,7 +75,8 @@ MainWindow::MainWindow(QWidget *parent)
     m_currentAction = MainWindow::Welcome;
 
     setCentralWidget(m_centralWidget);
-    setWindowState(Qt::WindowFullScreen);
+    setWindowFlags(Qt::Window | Qt::WindowMinMaxButtonsHint);
+    setFixedSize(1024,700);
 
     loadPage(m_currentAction);
 }

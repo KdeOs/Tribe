@@ -42,7 +42,7 @@ void UserCreationPage::createWidget()
     ui.setupUi(this);
     ui.addUser->setIcon(KIcon("list-add"));
 
-    ui.hostname->setText("kdeos");
+    ui.hostname->setText("kaos");
 
     connect(ui.addUser, SIGNAL(clicked(bool)), this, SLOT(addUserClicked()));
 
@@ -222,7 +222,7 @@ bool UserCreationPage::validate()
     m_handler->setUserAutoLoginList(autoLoginList);
 
     if (ui.hostname->text().isEmpty())
-        ui.hostname->setText("kdeos");
+        ui.hostname->setText("kaos");
 
     m_handler->setHostname(ui.hostname->text());
 

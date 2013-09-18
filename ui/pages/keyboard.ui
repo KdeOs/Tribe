@@ -36,7 +36,7 @@ p, li { white-space: pre-wrap; }
         </size>
        </property>
        <property name="text">
-        <string>Tribe will automatically try to detect your keyboard layout based on the settings you have selected during the boot.
+        <string>The installer will automatically try to detect your keyboard layout based on the settings you have selected during the boot.
 You can modify it to your liking, and type a few words to test your layout.</string>
        </property>
       </widget>

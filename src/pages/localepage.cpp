@@ -1,6 +1,7 @@
 /***************************************************************************
  *   Copyright (C) 2008 by Lukas Appelhans (l.appelhans@gmx.de)            *
  *                 2013 Manuel Tortosa (manutortosa@chakra-project.org)    *
+ *                 2013 Anke Boersma (demm@kaosx.us)                       *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -57,9 +58,6 @@ void LocalePage::createWidget()
     kdeLanguageCombo->addItem("");
     localeCombo->addItem("");
 
-    zoomInButton->setIcon(KIcon("zoom-in"));
-    zoomOutButton->setIcon(KIcon("zoom-out"));
-
     // this looks interesting.. finish it. ;)
     locationsSearch->hide();
     locationsView->hide();
@@ -68,7 +66,7 @@ void LocalePage::createWidget()
     marble->hide();
     marble->installEventFilter(this);
     marble->model()->addGeoDataFile(QString(DATA_INSTALL_DIR) + "/marble/data/placemarks/cities.kml");
-    marble->setMapThemeId("earth/bluemarble/bluemarble.dgml");
+    marble->setMapThemeId("earth/srtm/srtm.dgml");
     marble->setShowAtmosphere(true);
     marble->setCenterLatitude(35.0);
     marble->setCenterLongitude(-28.0);
@@ -135,13 +133,6 @@ void LocalePage::createWidget()
 
     // trigger changed for new combo box data
     continentChanged();
-
-    connect(zoomInButton,  SIGNAL(clicked()), marble, SLOT(zoomIn()));
-    connect(zoomOutButton, SIGNAL(clicked()), marble, SLOT(zoomOut()));
-
-    connect(zoomSlider, SIGNAL(valueChanged(int)), SLOT(zoom(int)));
-
-    connect(marble, SIGNAL(zoomChanged(int)), this, SLOT(zoomChanged(int)));
 
     connect(continentCombo, SIGNAL(currentIndexChanged(int)), SLOT(continentChanged()));
     connect(regionCombo,    SIGNAL(currentIndexChanged(int)), SLOT(regionChanged()));
@@ -321,13 +312,6 @@ void LocalePage::updateKDELangs(int state)
             }
         }
     }
-}
-
-void LocalePage::zoomChanged(int)
-{
-    disconnect(zoomSlider, SIGNAL(valueChanged(int)), this, SLOT(zoom(int)));
-    zoomSlider->setValue(marble->zoom() / 20);
-    connect(zoomSlider, SIGNAL(valueChanged(int)), this, SLOT(zoom(int)));
 }
 
 bool LocalePage::validate()

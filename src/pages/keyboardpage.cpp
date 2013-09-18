@@ -103,7 +103,7 @@ void KeyboardPage::createWidget()
     connect(ui.cbLayout, SIGNAL(currentIndexChanged(QString)), this, SLOT(selectedLayoutChanged(QString)));
     connect(ui.cbVariant, SIGNAL(currentIndexChanged(QString)), this, SLOT(selectedVariantChanged(QString)));
     
-    // make sure we fill the install variables even if the user does not change nothing
+    // make sure we fill the install variables even if the user doesn't change anything
     m_install->setKbLayout(m_selectedLayout);
     m_install->setKbVariant(m_selectedVariant);
 

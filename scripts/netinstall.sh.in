@@ -10,7 +10,7 @@ echo "NETINST: start"
 echo "NETINST: rankmirrors"
 config_dir="@CMAKE_INSTALL_PREFIX@/share/tribe/config"
 mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.pacsave
-rankmirrors -n 3 -r core "$config_dir/mirrorlist" > /etc/pacman.d/mirrorlist
+rankmirrors -n 1 -r core "$config_dir/mirrorlist" > /etc/pacman.d/mirrorlist
 
 pacman_args=( $pkglist )
 pacman_args+=(--noconfirm)
